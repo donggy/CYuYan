@@ -7,3 +7,4 @@ git create a branch is quick
 有冲突
 what's wrong
 可以吗
+分支策略
