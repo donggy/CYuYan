@@ -5,3 +5,6 @@ hhaha
 ooooooo
 git create a branch is quick
 可以的哦
+有冲突
+what's wrong
+可以吗
