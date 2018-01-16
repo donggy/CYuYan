@@ -4,3 +4,5 @@ git is free software.
 hhaha
 ooooooo
 git create a branch is quick
+有冲突
+what's wrong
