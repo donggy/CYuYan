@@ -1,0 +1,23 @@
+编译和运行说明：
+第一步：编译Array.c文件
+    gcc Array.c -o libArray.so -shared -std=c99
+第二步；编译main.c文件并连接libArray.so库
+    gcc main.c -o main -L. -lArray -std=c99
+第三步：运行
+    ./main
+如果提示libArray.so这个库找不到，则需要设置LD_LIBRARY_PATH。设置方法如下：
+    export LD_LIBRARY_PATH=.:LD_LIBRARY_PATH
+
+编译Array.c时，输出文件也可以不含有lib,如：
+    gcc Array.c -o Array.so -shared -std=c99
+这时编译main.c时用如下命令：
+    gcc main.c -o main -L. Array.so -std=c99
+
+编译参数说明：
+-o: 表示输出的文件名
+-shared:表示生成共享库
+-std=c99:表示使用c99标准，也可以设置为c11表示使用c2011标准
+-L.:-L用于设置连接库的目录。后面的.表示当前目录。注意L与目录名之间不能有空格
+-l:-l后紧跟要连接的库的名字中去除lib的部分。如libArray.so，则使用-l参数时，写为-lArray
+
+
