@@ -2,9 +2,9 @@
 void sortByBubble(int array[], int arrayLength)
 {
    int temp = 0;
-   for(int i = 0; i < arrayLength; i++)
+   for(int i = 0; i < arrayLength-1; i++)
    {
-      for(int j=0;j < arrayLength-1; j++)
+      for(int j=0;j < arrayLength-1-i; j++)
       {
          if(array[j] > array[j+1])
          {
